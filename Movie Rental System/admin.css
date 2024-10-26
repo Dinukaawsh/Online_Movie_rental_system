@@ -1,0 +1,414 @@
+/* General Styles */
+:root {
+    --primary-color: #001f3f;
+    --accent-color: #f620b2;
+    --background-overlay: rgba(0, 0, 0, 0.6);
+    --white: #ffffff;
+}
+
+body {
+
+
+    font-family: 'Poppins', sans-serif; /* Sleek, modern font */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox centering */
+    flex-direction: column; /* Column direction for main and footer */
+    justify-content: space-between; /* Space between header and footer */
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto;
+    background: 
+        url('images/cinema.jpg') no-repeat center center fixed;
+   
+    background-size: cover; /* Makes the image cover the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    animation: gradientAnimation 10s ease-in-out infinite; /* Faster animation */
+}
+/* Keyframes for animated gradient background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+        opacity: 1; /* Start fully opaque */
+    }
+    25% {
+        background-position: 100% 50%; /* Move to the right */
+        opacity: 0.8; /* Slightly transparent */
+    }
+    50% {
+        background-position: 0% 100%; /* Move down */
+        opacity: 1; /* Fully opaque again */
+    }
+    75% {
+        background-position: 100% 100%; /* Move diagonally */
+        opacity: 0.8; /* Slightly transparent */
+    }
+    100% {
+        background-position: 0% 50%; /* Back to start */
+        opacity: 1; /* Fully opaque */
+    }
+}
+
+/* Enhanced Particle Background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8; /* Increased opacity for better visibility */
+}
+
+/* Additional Particle Settings */
+.particle {
+    background-color: #ffffff; /* White color for particles */
+    filter: blur(4px); /* Apply a slight blur for a glowing effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+
+.container {
+    width: 85%;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 1200px;
+    
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    color: #f7f7f7; /* Off-white text color */
+            font-size: 2.5rem; /* Smaller title size */
+            margin-bottom: 30px;
+            letter-spacing: 1.5px; /* Spacing between letters */
+            text-transform: uppercase; /* Uppercase for emphasis */
+            font-weight: 600;
+            text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+            animation: fadeIn 1s ease-in-out; /* Fade-in animation for header */
+}
+
+/* Button Styles */
+button#addMovieBtn {
+    background-color: transparent; /* Transparent background */
+    color: #e5eaee; /* Navblue text color */
+    border: 2px solid #001f3f; /* Navblue border */
+    padding: 14px 38px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+button#addMovieBtn {
+    position: relative;
+    overflow: hidden;
+}
+
+
+button#addMovieBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff0095, #6f35dc); /* Gradient hover color */
+    z-index: -1;
+    border-radius: 50px; /* Match the button's rounded shape */
+    transition: all 0.5s ease; /* Smooth transition for hover effect */
+}
+
+button#addMovieBtn:hover {
+   
+    transform: scale(1.05); /* Slight hover effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+
+    color: #fff; /* Keep the text white */
+            transform: translateY(-5px); /* Slight lift on hover */
+            border: 2px solid #fff; /* White border on hover */
+            background-color: #e91e63; /* Darker shade on hover */
+}
+
+button#addMovieBtn:hover::before {
+    width: 100%; /* Expand background to full width */
+}
+button#addMovieBtn:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    border-radius: 50%;
+    animation: ripple 0.6s linear;
+    opacity: 0;
+}
+button#addMovieBtn:active:after {
+    transform: scale(4); /* Scale up the ripple */
+    opacity: 1; /* Make it visible */
+}
+
+/* Active/Pressed Effects */
+button#addMovieBtn:active {
+    transform: translateY(2px); /* Push down slightly on click */
+    box-shadow: none; /* Remove shadow on click */
+    transform: scale(0.98); /* Slightly reduce size on click */
+}
+button#addMovieBtn:focus {
+    outline: 2px solid #ff0095; /* Highlight focus state */
+    outline-offset: 2px; /* Space the outline away from the button */
+}
+@keyframes ripple {
+    from {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px; /* Spacing between rows */
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* Ensures rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+}
+
+/* Header Row Styling */
+th {
+    background: linear-gradient(135deg, #f620b2, #7d1ea0); /* Gradient background */
+    color: #fff;
+    padding: 15px 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 3px solid #7d1ea0; /* Accent bottom border */
+    font-size: 1rem;
+    text-align: left;
+    position: sticky;
+    top: 0; /* Sticky header */
+    z-index: 1;
+}
+
+/* Data Cells */
+td {
+    padding: 15px 25px;
+    background-color: rgba(245, 245, 245, 0.9); /* Subtle light background */
+    color: #444; /* Slightly darker text for readability */
+    font-size: 0.95rem;
+    border-radius: 8px; /* Rounded corners for rows */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Softer shadow */
+}
+
+/* Hover Effect for Rows */
+tr:hover td {
+    background-color: #ffe5f0; /* Light pink background on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+/* Alternating Row Colors */
+tr:nth-child(even) td {
+    background-color: rgba(235, 235, 235, 0.9); /* Slightly darker for contrast */
+}
+
+/* Highlight First Column */
+td:first-child {
+    font-weight: 600;
+    color: #f620b2; /* Accent color */
+}
+
+/* Responsive Table Adjustments */
+@media (max-width: 768px) {
+    th, td {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    table {
+        border-spacing: 0 10px; /* Smaller spacing on mobile */
+    }
+}
+
+
+/* Image Styles */
+.movie-image {
+    width: 140px;
+    height: 80px;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Edit and Delete Button Styles */
+button.edit, button.delete {
+    padding: 10px 30px; /* Adjusted padding */
+            border-radius: 50px; /* Fully rounded buttons */
+            text-decoration: none;
+            overflow: hidden; /* Hide overflow for ripple effect */
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff; /* White text color */
+            background-color: transparent; /* Transparent background */
+            border: 2px solid transparent; /* Initially no border */
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s ease; /* Smooth transition for hover effects */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+button.edit {
+    background-color: white; /* White for Edit button */
+    color: #001f3f; /* Navblue text */
+    border: 2px solid #001f3f; /* Navblue border */
+}
+
+button.edit:hover {
+    color: #fff; /* Keep the text white */
+            transform: translateY(-5px); /* Slight lift on hover */
+            border: 2px solid #fff; /* White border on hover */
+            background-color: #e91e63; /* Darker shade on hover */
+}
+
+button.delete {
+    background-color: #3eb6f2; /* Blue for Delete button */
+    color: white;
+}
+
+button.delete:hover {
+    color: #fff; /* Keep the text white */
+            transform: translateY(-5px); /* Slight lift on hover */
+            border: 2px solid #fff; /* White border on hover */
+            background-color: #e91e63; /* Darker shade on hover */
+}
+ /* Footer */
+ footer {
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent footer */
+    color: #fff;
+    padding: 10px 0; /* Reduced padding for footer */
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #f0db4f;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media a img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-media a:hover img {
+
+    opacity: 0.8;
+}
+.footer-links a {
+    padding: 0 8px; /* Adds more clickable space */
+}
+
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    main {
+        padding: 20px 10px; /* Reduced padding for mobile */
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-container .btn {
+        width: 100%; /* Full-width buttons on mobile */
+        margin-bottom: 10px; /* Space between buttons */
+    }
+}
+/* Overlay with Animated Gradient */
+#gradient-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* In front of the background image */
+    background: linear-gradient(45deg, rgba(255, 0, 149, 0.2), rgba(255, 111, 53, 0.2), rgba(111, 53, 220, 0.2)); /* Reduced opacity */
+    animation: gradientAnimation 10s ease-in-out infinite; /* Gradient animation */
+    backdrop-filter: blur(5px); /* Reduced blur effect */
+}
+
+        /* Keyframes for animated gradient overlay */
+        @keyframes gradientAnimation {
+            0% {
+                opacity: 1; /* Start fully opaque */
+            }
+            25% {
+                opacity: 0.8; /* Slightly transparent */
+            }
+            50% {
+                opacity: 1; /* Fully opaque again */
+            }
+            75% {
+                opacity: 0.8; /* Slightly transparent */
+            }
+            100% {
+                opacity: 1; /* Back to fully opaque */
+            }
+        }
+
+        /* Enhanced Particle Background */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 1.5; /* Slightly more transparent */
+        }

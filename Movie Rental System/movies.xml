@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <movie id="1729535805">
+    <title>Winnie the pooh</title>
+    <genre>horror</genre>
+    <releaseYear>2024</releaseYear>
+    <rating>9.5</rating>
+    <available>true</available>
+    <image>uploads/vinnie the pooh.jpg</image>
+  </movie>
+  <movie id="1729535839">
+    <title>Vedaa</title>
+    <genre>Action</genre>
+    <releaseYear>2024</releaseYear>
+    <rating>9.6</rating>
+    <available>true</available>
+    <image>uploads/vedaa.jpg</image>
+  </movie>
+  <movie id="1729535883">
+    <title>Trigger warning</title>
+    <genre>Action</genre>
+    <releaseYear>2024</releaseYear>
+    <rating>8.8</rating>
+    <available>true</available>
+    <image>uploads/Trigger warning.jpg</image>
+  </movie>
+  <movie id="1729535924">
+    <title>Deadpool and Wulverine</title>
+    <genre>Marval</genre>
+    <releaseYear>2024</releaseYear>
+    <rating>9.8</rating>
+    <available>true</available>
+    <image>uploads/deadpool and wulwerine.jpeg</image>
+  </movie>
+  <movie id="1729535961">
+    <title>Ghosted</title>
+    <genre>Action</genre>
+    <releaseYear>2022</releaseYear>
+    <rating>8.9</rating>
+    <available>true</available>
+    <image>uploads/ghosted.jpg</image>
+  </movie>
+  <movie id="1729536009">
+    <title>The Dark night</title>
+    <genre>Marval</genre>
+    <releaseYear>2018</releaseYear>
+    <rating>9.0</rating>
+    <available>true</available>
+    <image>uploads/the dark nignt.jpeg</image>
+  </movie>
+</catalog>

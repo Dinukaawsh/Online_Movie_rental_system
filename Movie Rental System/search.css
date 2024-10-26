@@ -1,0 +1,58 @@
+/* Style for the search bar */
+#search {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between; /* Space between input, select, and button */
+    align-items: center;
+    gap: 10px; /* Space between input and select */
+    position: relative; /* Relative position to allow button adjustment */
+}
+
+#search input[type="text"] {
+    width: 300px; /* Increased width for a better look */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for input */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+#search input[type="text"]:focus {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow on focus */
+    outline: none; /* Remove outline */
+}
+
+#search select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+#search select:focus {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow on focus */
+    outline: none;
+}
+
+/* Button Styles */
+#search button {
+    padding: 12px 25px;
+    background-color: #ff5722; /* Changed to a bright, standout color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute; /* Absolute positioning for better alignment */
+    right: 0; /* Align to the right of the container */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for button */
+}
+
+#search button:hover {
+    background-color: #e64a19; /* Darker hover color */
+    transform: translateY(-2px) scale(1.05); /* Slight lift and scale effect */
+}

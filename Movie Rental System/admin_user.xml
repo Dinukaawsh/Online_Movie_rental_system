@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user>
+    <id>1</id>
+    <username>admin</username>
+    <password>$2y$10$QX/shv86vYv4.3.vm43Ag.fu6OpRhnfFp/y4WWd7cizEng3xh2ucy</password>
+    <rentals/>
+  </user>
+  <user>
+    <id>2</id>
+    <username>vidura</username>
+    <password>$2y$10$2h1DN6GNdpJnyR.WPcXPPu2IaLe.7FA.wh91Or25Z/Z5mmNEQUdbq</password>
+    <rentals/>
+  </user>
+  <user>
+    <id>3</id>
+    <username>admin</username>
+    <password>$2y$10$sRg1e9OmuOZ7XW.XHO/4RuN0CEL42rFdzlkOOjwjoqWkZ5SfWZEim</password>
+    <rentals/>
+  </user>
+  <user>
+    <id>4</id>
+    <username>Dinuka Ashan</username>
+    <password>$2y$10$d5GYZa9pYCfp3uYn//6Gs./VmTKdMu94hCMlemriVE8LSuzOLRtAC</password>
+    <rentals/>
+  </user>
+  <user>
+    <id>5</id>
+    <username>Dinuka Ashan</username>
+    <password>$2y$10$Ohlww7dCrGjeZT6Sh6l0P.ODTQu0RHEACqUzl7aNJrZI6I.X3PHh.</password>
+    <rentals/>
+  </user>
+</users>
